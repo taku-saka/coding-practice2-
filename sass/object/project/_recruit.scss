@@ -4,6 +4,7 @@
   @include g.mq(md) {
     padding: 0;
   }
+
   &__inner {
     display: flex;
 
@@ -11,6 +12,7 @@
       flex-direction: column-reverse;
     }
   }
+
   &__desc {
     display: flex;
     align-items: center;
@@ -24,9 +26,10 @@
     margin-bottom: 30px;
     text-align: center;
   }
+
   &__img-wrapper {
     width: 60%;
-    background-image: url(img/recruit.jpg);
+    background-image: url(../../../img/recruit.jpg);
     background-position: center center;
     background-size: cover;
 
@@ -35,6 +38,7 @@
       height: 200px;
     }
   }
+
   &__body {
     margin-bottom: 30px;
   }
