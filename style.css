@@ -475,7 +475,7 @@ img {
 }
 
 .l-contents--page-recruit {
-  background-image: url(../../img/bg-geometry.png);
+  background-image: url(img/bg-geometry.png);
   /* Background pattern from Toptal Subtle Patterns */
   background-repeat: repeat;
 }
@@ -1098,7 +1098,7 @@ img {
   justify-content: center;
   height: 100vh;
   color: #fff;
-  background-image: url(../../../img/hero.jpg);
+  background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1191,7 +1191,7 @@ img {
   justify-content: center;
   height: 240px;
   color: #fff;
-  background-image: url(../../../img/hero.jpg);
+  background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1635,14 +1635,14 @@ img {
 .p-company__inner {
   padding: 100px 0;
   max-width: 1300px;
-  background-image: url(../../../img/bg-circle.png), url(../../../img/bg-face.png);
+  background-image: url(img/bg-circle.png), url(img/bg-face.png);
   background-position: center center, center center;
   background-size: contain;
 }
 @media screen and (max-width: 768px) {
   .p-company__inner {
     padding: 60px 0;
-    background-image: url(../../../img/sp_bg-circle.png);
+    background-image: url(img/sp_bg-circle.png);
     background-position: center center;
     background-size: 375px;
   }
@@ -1728,7 +1728,7 @@ img {
 }
 .p-recruit__img-wrapper {
   width: 60%;
-  background-image: url(../../../img/recruit.jpg);
+  background-image: url(img/recruit.jpg);
   background-position: center center;
   background-size: cover;
 }
@@ -1757,13 +1757,13 @@ img {
 
 .p-greeting {
   padding: 100px 0 70px;
-  background-image: url(../../../img/bg-circle.png), url(../../../img/bg-face.png);
+  background-image: url(img/bg-circle.png), url(img/bg-face.png);
   background-position: center -20px, center 40px;
 }
 @media screen and (max-width: 768px) {
   .p-greeting {
     padding: 60px 0 60px;
-    background-image: url(../../../img/sp_bg-circle.png);
+    background-image: url(img/sp_bg-circle.png);
     background-position: center -20px;
     background-size: 375px;
   }
