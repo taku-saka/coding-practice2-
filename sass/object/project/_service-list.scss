@@ -1,0 +1,11 @@
+@use "../../global" as g;
+
+.p-service-list {
+  .c-media:not(:last-child) {
+    margin-bottom: 60px;
+
+    @include g.mq(md) {
+      margin-bottom: 40px;
+    }
+  }
+}

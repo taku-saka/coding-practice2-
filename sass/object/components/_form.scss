@@ -1,0 +1,92 @@
+@use "../../global" as g;
+
+.c-form {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-left: 5px;
+
+    @include g.font-size(12);
+  }
+
+  &__note {
+    font-weight: normal;
+    margin-left: 5px;
+
+    @include g.font-size(12);
+  }
+
+  &__require {
+    margin-left: 10px;
+    color: g.$color-primary;
+
+    @include g.font-size(12);
+  }
+
+  &__radio {
+    @include g.mq(md) {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    @include g.mq(md) {
+      margin-right: 35px;
+
+      @include g.mq(md) {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__input,
+  &__select {
+    width: 300px;
+    padding: 8px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &__textarea {
+    min-width: 600px;
+    min-height: 200px;
+    padding: 8px;
+    resize: both;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+
+    @include g.mq(md) {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+    border: 1px solid #333;
+    border-radius: 50%;
+  }
+
+  input[type="tel"] {
+    width: 200px;
+
+    @include g.mq(md) {
+      width: 100%;
+    }
+  }
+}

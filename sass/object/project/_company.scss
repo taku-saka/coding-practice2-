@@ -1,0 +1,26 @@
+@use "../../global" as g;
+
+.p-company {
+  text-align: center;
+  padding: 0;
+
+  &__inner {
+    padding: 100px 0;
+    max-width: 1300px;
+    background-image: url(img/bg-circle.png), url(img/bg-face.png);
+    background-position: center center, center center;
+    background-size: contain;
+    @include g.mq(md) {
+      padding: 60px 0;
+      background-image: url(img/sp_bg-circle.png);
+      background-position: center center;
+      background-size: 375px;
+    }
+  }
+  &__heading {
+    margin-bottom: 30px;
+  }
+  &__body {
+    margin-bottom: 30px;
+  }
+}

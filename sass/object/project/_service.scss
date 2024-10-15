@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+.p-service {
+  &__heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__body {
+    margin-bottom: 30px;
+  }
+  &__link {
+    text-align: center;
+  }
+}

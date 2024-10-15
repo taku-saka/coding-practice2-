@@ -1,0 +1,75 @@
+@use "../../global" as g;
+
+.c-card {
+
+  //__textはない？
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @include g.font-size(18);
+
+    @include g.mq(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__caption {
+    text-align: center;
+    @include g.font-size(16);
+  }
+
+  &__img-wrapper {
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-card-wrapper {
+  margin-bottom: -30px;
+
+  @include g.mq(md) {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .c-card {
+    margin-bottom: 30px;
+  }
+
+  &--col3 {
+    //--col3はなぜ必要？
+    display: flex;
+    flex-wrap: wrap;
+
+    .c-card {
+      width: calc(33.33333% - 60px / 3);
+      margin-right: 30px;
+
+      @include g.mq(md) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

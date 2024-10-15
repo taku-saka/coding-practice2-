@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+.p-job-list {
+  padding-top: 0;
+  &__heading {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__name {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include g.font-size(24);
+    @include g.mq(md) {
+      margin-bottom: 20px;
+
+      @include g.font-size(16);
+    }
+  }
+  &__detail {
+    padding: 60px 95px;
+    border: 1px solid #b067cf;
+    border-radius: 6px;
+    background-color: #fff;
+
+    @include g.mq(md) {
+      padding: 30px 20px;
+    }
+  }
+  &__table {
+    margin-bottom: 50px;
+
+    @include g.mq(md) {
+      margin-bottom: 40px;
+    }
+  }
+  &__link {
+    text-align: center;
+  }
+  &__link-note {
+    display: block;
+    margin-top: 5px;
+
+    @include g.font-size(12);
+  }
+}

@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+.p-breadcrumb {
+  position: sticky;
+  top: 64px;
+  z-index: 1;
+  padding: 8px 0;
+  list-style: none;
+  background-color: g.$color-gray;
+
+  @include g.mq(md) {
+    padding: 5px 0;
+  }
+
+  &__list {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__item {
+    display: inline;
+    list-style: none;
+    text-transform: uppercase;
+
+    @include g.font-size(12);
+    @include g.mq(md) {
+      @include g.font-size(11);
+    }
+
+    &::after {
+      padding: 0 0.5em;
+      content: ">";
+      color: #555;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+.p-breadcrumb:before,
+.p-breadcrumb:after {
+  content: "";
+  display: table;
+}

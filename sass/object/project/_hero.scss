@@ -1,0 +1,112 @@
+@use "../../global" as g;
+
+.p-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  background-image: url(img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &__inner {
+    padding: 0 30px;
+    text-align: center;
+
+    @include g.mq(md) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-weight: bold;
+    line-height: 1;
+
+    @include g.font-size(72);
+    @include g.mq(md) {
+      line-height: 1.1;
+
+      @include g.font-size(40);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+
+    @include g.font-size(24);
+    @include g.mq(md) {
+      @include g.font-size(16);
+    }
+  }
+
+  &__scroll {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    color: #fff;
+    padding: 10px 10px 90px;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    text-decoration: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    -ms-writing-mode: tb-rl;
+    -ms-writing-mode: tb-lr;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+
+    @include g.font-size(12);
+    @include g.mq(md) {
+      right: 5px;
+      padding: 10px 10px 60px;
+    }
+  }
+  &__scroll::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 80px;
+    background: #fff;
+    content: "";
+    -webkit-animation: scrollDownLine 1.5s infinite;
+    animation: scrollDownLine 1.5s infinite;
+
+    @include g.mq(md) {
+      height: 50px;
+    }
+  }
+  &__link {
+    margin-top: 50px;
+    @include g.mq(md) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.p-sub-hero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  color: #fff;
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include g.mq(md) {
+    height: 180px;
+  }
+  &__inner {
+    padding: 50px 40px 10px 40px;
+    text-align: center;
+  }
+}

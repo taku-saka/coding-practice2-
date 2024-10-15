@@ -1,0 +1,56 @@
+@use "../../global" as g;
+
+.c-btn {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.4;
+  display: inline-block;
+  width: 220px;
+  padding: 18px 0;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-image: g.$color-btn; //-colorではない？
+  background-size: 200% auto;
+
+  @include g.font-size(14);
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d8"; //Unicode?
+    transition: 0.3s;
+    transform: translateY(-50%); //なぜy軸？
+
+    @include g.font-size(14);
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-position: right center;
+
+    &::after {
+      right: 1.2em;
+
+      @include g.mq(md) {
+        right: 1.5em;
+      }
+    }
+  }
+
+  &--transparent {
+    border: 1px solid #fff;
+    background: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
